@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "APS Normative Document Schema",
+  "description": "Schema for Brazilian Primary Health Care normative documents",
+  "type": "object",
+  "required": [
+    "id_norma",
+    "tipo",
+    "orgao",
+    "numero",
+    "ano",
+    "data_publicacao",
+    "ementa"
+  ],
+  "properties": {
+    "id_norma": {
+      "type": "string",
+      "description": "Unique identifier for the norm",
+      "pattern": "^[A-Z_0-9]+$",
+      "examples": ["PORTARIA_2979_2019", "LC_141_2012"]
+    },
+    "tipo": {
+      "type": "string",
+      "description": "Type of normative document",
+      "enum": [
+        "Constituição",
+        "Lei",
+        "Lei Complementar",
+        "Decreto",
+        "Portaria GM/MS",
+        "Portaria SAPS",
+        "Portaria de Consolidação",
+        "Resolução CIT",
+        "Nota Técnica",
+        "Manual Operacional"
+      ]
+    },
+    "orgao": {
+      "type": "string",
+      "description": "Issuing organization",
+      "examples": ["GM/MS", "SAPS", "CIT", "Presidência"]
+    },
+    "numero": {
+      "type": "string",
+      "description": "Norm number"
+    },
+    "ano": {
+      "type": "integer",
+      "description": "Year of publication",
+      "minimum": 1988,
+      "maximum": 2100
+    },
+    "data_publicacao": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date (ISO 8601)"
+    },
+    "ementa": {
+      "type": "string",
+      "description": "Summary/abstract of the norm"
+    },
+    "texto_completo": {
+      "type": "string",
+      "description": "Full text of the norm"
+    },
+    "tema_principal": {
+      "type": "string",
+      "description": "Main theme/topic",
+      "enum": [
+        "organizacao_aps",
+        "financiamento",
+        "sistemas_informacao",
+        "forca_trabalho",
+        "equidade",
+        "saude_bucal",
+        "credenciamento",
+        "programas_especificos"
+      ]
+    },
+    "temas_secundarios": {
+      "type": "array",
+      "description": "Secondary themes",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status_vigencia": {
+      "type": "string",
+      "description": "Current validity status",
+      "enum": ["vigente", "revogada", "alterada_parcial"],
+      "default": "vigente"
+    },
+    "efeitos_financeiros_partir_de": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Date from which financial effects apply"
+    },
+    "url_html": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to HTML version of the document"
+    },
+    "url_pdf": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL to PDF version of the document"
+    },
+    "fonte": {
+      "type": "string",
+      "description": "Data source",
+      "enum": ["planalto", "bvsms", "consolidacao", "saps", "manual"]
+    },
+    "relacoes": {
+      "type": "object",
+      "description": "Relationships with other norms",
+      "properties": {
+        "institui": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "altera": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "revoga": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "regulamenta": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "consolida": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    }
+  }
+}

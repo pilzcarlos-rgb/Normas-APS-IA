@@ -1,0 +1,38 @@
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+selenium>=4.15.0
+
+# Data processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Database
+sqlalchemy>=2.0.0
+sqlite3
+
+# PDF processing
+PyPDF2>=3.0.0
+pdfplumber>=0.10.0
+
+# Natural Language Processing
+nltk>=3.8.0
+spacy>=3.7.0
+
+# Web framework for portal
+flask>=3.0.0
+jinja2>=3.1.0
+
+# Configuration
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Utilities
+python-dateutil>=2.8.0
+tqdm>=4.66.0
+click>=8.1.0
