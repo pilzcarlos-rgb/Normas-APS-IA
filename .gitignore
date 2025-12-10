@@ -1,0 +1,16 @@
+# Arquivos de documentos PDF (muito grandes para versionar)
+documentos/**/*.pdf
+documentos/**/*.PDF
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Backups
+*.bak
+*.backup
