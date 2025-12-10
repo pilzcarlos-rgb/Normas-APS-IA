@@ -216,5 +216,44 @@ function backToTopics() {
 
 // Função para download de todas as normas (futuro)
 function downloadAllNormas() {
-    alert('Funcionalidade de download em massa em desenvolvimento. Por enquanto, baixe individualmente cada norma.');
+    // Criar notificação toast em vez de alert
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #2c3e50;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 9999;
+        max-width: 400px;
+        animation: slideIn 0.3s ease-out;
+    `;
+    toast.innerHTML = `
+        <strong>⚙️ Em Desenvolvimento</strong><br>
+        <span style="font-size: 14px; opacity: 0.9;">
+            A funcionalidade de download em massa está em desenvolvimento. 
+            Por enquanto, baixe individualmente cada norma.
+        </span>
+    `;
+    
+    // Adicionar animação
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    document.body.appendChild(toast);
+    
+    // Remover após 5 segundos
+    setTimeout(() => {
+        toast.style.animation = 'slideIn 0.3s ease-out reverse';
+        setTimeout(() => toast.remove(), 300);
+    }, 5000);
 }
