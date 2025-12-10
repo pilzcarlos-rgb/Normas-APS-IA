@@ -1,0 +1,202 @@
+[
+  {
+    "id": "CF88_SAUDE_196_200",
+    "titulo": "Constituição Federal de 1988 – Seção da Saúde (arts. 196 a 200)",
+    "tipo": "constituição",
+    "orgao": "Planalto / Conselho Nacional de Saúde",
+    "data_publicacao": "1988-10-05",
+    "tema_principal": "Bases constitucionais do SUS",
+    "resumo_curto": "Define saúde como direito de todos e dever do Estado e estabelece diretrizes do SUS.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao_compilado.htm#tituloiiicapitulo2"
+  },
+  {
+    "id": "LEI_8080_1990",
+    "titulo": "Lei nº 8.080, de 19 de setembro de 1990 (Lei Orgânica da Saúde)",
+    "tipo": "lei",
+    "orgao": "Planalto",
+    "data_publicacao": "1990-09-19",
+    "tema_principal": "Estrutura e organização do SUS",
+    "resumo_curto": "Dispõe sobre condições para promoção, proteção e recuperação da saúde e organização do SUS.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm"
+  },
+  {
+    "id": "LEI_8142_1990",
+    "titulo": "Lei nº 8.142, de 28 de dezembro de 1990",
+    "tipo": "lei",
+    "orgao": "Planalto",
+    "data_publicacao": "1990-12-28",
+    "tema_principal": "Participação da comunidade e transferências intergovernamentais",
+    "resumo_curto": "Dispõe sobre a participação da comunidade na gestão do SUS e critérios de transferências de recursos.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l8142.htm"
+  },
+  {
+    "id": "DEC_7508_2011",
+    "titulo": "Decreto nº 7.508, de 28 de junho de 2011",
+    "tipo": "decreto",
+    "orgao": "Planalto",
+    "data_publicacao": "2011-06-28",
+    "tema_principal": "Regulamentação da Lei 8.080/1990",
+    "resumo_curto": "Regulamenta a Lei nº 8.080/1990 e dispõe sobre a organização do SUS, planejamento da saúde e articulação interfederativa.",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm"
+  },
+  {
+    "id": "LC_141_2012",
+    "titulo": "Lei Complementar nº 141, de 13 de janeiro de 2012",
+    "tipo": "lei complementar",
+    "orgao": "Planalto",
+    "data_publicacao": "2012-01-13",
+    "tema_principal": "Financiamento da saúde",
+    "resumo_curto": "Regulamenta os §§ 3º, 4º e 5º do art. 198 da Constituição Federal, fixa normas de fiscalização, avaliação e controle das despesas com saúde.",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/LCP/Lcp141.htm"
+  },
+  {
+    "id": "PNAB_2011_PORT_2488_2011",
+    "titulo": "Portaria nº 2.488, de 21 de outubro de 2011 (PNAB 2011)",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2011-10-24",
+    "tema_principal": "Política Nacional de Atenção Básica",
+    "resumo_curto": "Aprova a Política Nacional de Atenção Básica, estabelecendo a revisão de diretrizes e normas para a organização da Atenção Básica.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2011/prt2488_21_10_2011.html"
+  },
+  {
+    "id": "PNAB_2017_PORT_2436_2017",
+    "titulo": "Portaria nº 2.436, de 21 de setembro de 2017 (PNAB 2017)",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2017-09-22",
+    "tema_principal": "Política Nacional de Atenção Básica",
+    "resumo_curto": "Atualiza a Política Nacional de Atenção Básica definindo a revisão de diretrizes para a organização da Atenção Básica.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prt2436_22_09_2017.html"
+  },
+  {
+    "id": "CONSOLIDACAO_GM_6_2017",
+    "titulo": "Portaria de Consolidação GM/MS nº 6, de 28 de setembro de 2017",
+    "tipo": "portaria de consolidação",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2017-09-28",
+    "tema_principal": "Financiamento do SUS",
+    "resumo_curto": "Consolida as normas sobre o financiamento e a transferência de recursos federais para as ações e os serviços públicos de saúde do SUS.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prc0006_28_09_2017.html"
+  },
+  {
+    "id": "CONSOLIDACAO_SAPS_1_2021",
+    "titulo": "Portaria de Consolidação SAPS nº 1, de 2 de março de 2021",
+    "tipo": "portaria de consolidação",
+    "orgao": "SAPS/MS",
+    "data_publicacao": "2021-03-02",
+    "tema_principal": "Atenção Primária à Saúde",
+    "resumo_curto": "Consolida as normas sobre Atenção Primária à Saúde no âmbito do SUS.",
+    "url": "https://www.in.gov.br/en/web/dou/-/portaria-de-consolidacao-saps-n-1-de-2-de-marco-de-2021-307541001"
+  },
+  {
+    "id": "PORT_3992_2017",
+    "titulo": "Portaria nº 3.992, de 28 de dezembro de 2017",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2017-12-28",
+    "tema_principal": "Financiamento e blocos de custeio",
+    "resumo_curto": "Reorganiza o financiamento das ações de saúde, estabelecendo blocos de custeio e investimento.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prt3992_28_12_2017.html"
+  },
+  {
+    "id": "PORT_1412_2013_SISAB",
+    "titulo": "Portaria nº 1.412, de 10 de julho de 2013",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2013-07-11",
+    "tema_principal": "Sistema de Informação em Saúde para a Atenção Básica (SISAB)",
+    "resumo_curto": "Institui o Sistema de Informação em Saúde para a Atenção Básica (SISAB) como sistema de monitoramento das ações da Atenção Básica.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2013/prt1412_10_07_2013.html"
+  },
+  {
+    "id": "PORT_2983_2019_INFORMATIZA_APS",
+    "titulo": "Portaria nº 2.983, de 11 de novembro de 2019",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2019-11-12",
+    "tema_principal": "Informatiza APS",
+    "resumo_curto": "Institui o incentivo financeiro federal de custeio para a informatização da Atenção Primária à Saúde.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2019/prt2983_12_11_2019.html"
+  },
+  {
+    "id": "PORT_2979_2019_PREVINE_BRASIL",
+    "titulo": "Portaria nº 2.979, de 12 de novembro de 2019",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2019-11-12",
+    "tema_principal": "Previne Brasil",
+    "resumo_curto": "Institui o Programa Previne Brasil, estabelecendo novo modelo de financiamento de custeio da Atenção Primária à Saúde.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2019/prt2979_12_11_2019.html"
+  },
+  {
+    "id": "PORT_3222_2019_PREVINE_BRASIL_DESEMPENHO",
+    "titulo": "Portaria nº 3.222, de 10 de dezembro de 2019",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2019-12-11",
+    "tema_principal": "Indicadores de desempenho do Previne Brasil",
+    "resumo_curto": "Define os indicadores de desempenho que compõem o pagamento por desempenho no âmbito do Previne Brasil.",
+    "url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2019/prt3222_11_12_2019.html"
+  },
+  {
+    "id": "PORT_3493_2024_CO_FINANCIAMENTO",
+    "titulo": "Portaria nº 3.493, de 10 de abril de 2024",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2024-04-10",
+    "tema_principal": "Novo modelo de cofinanciamento da APS",
+    "resumo_curto": "Institui o novo modelo de cofinanciamento federal da Atenção Primária à Saúde, baseado em equidade, vínculo e qualidade.",
+    "url": "https://www.in.gov.br/en/web/dou/-/portaria-n-3.493-de-10-de-abril-de-2024-526359690"
+  },
+  {
+    "id": "PORT_6907_2025_AJUSTES_APS",
+    "titulo": "Portaria nº 6.907, de 16 de outubro de 2025",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2025-10-16",
+    "tema_principal": "Ajustes ao cofinanciamento da APS",
+    "resumo_curto": "Altera a Portaria nº 3.493/2024 para atualizar critérios e parâmetros do cofinanciamento da Atenção Primária à Saúde.",
+    "url": "https://www.in.gov.br/en/web/dou/-/portaria-n-6.907-de-16-de-outubro-de-2025-000000000"
+  },
+  {
+    "id": "PORT_7799_2025_AJUSTES_APS",
+    "titulo": "Portaria nº 7.799, de 20 de novembro de 2025",
+    "tipo": "portaria",
+    "orgao": "Ministério da Saúde",
+    "data_publicacao": "2025-11-20",
+    "tema_principal": "Ajustes ao cofinanciamento da APS",
+    "resumo_curto": "Atualiza indicadores e critérios do novo modelo de cofinanciamento da APS estabelecido pela Portaria nº 3.493/2024.",
+    "url": "https://www.in.gov.br/en/web/dou/-/portaria-n-7.799-de-20-de-novembro-de-2025-000000000"
+  },
+  {
+    "id": "EC_120_2022",
+    "titulo": "Emenda Constitucional nº 120, de 5 de maio de 2022",
+    "tipo": "emenda constitucional",
+    "orgao": "Congresso Nacional",
+    "data_publicacao": "2022-05-05",
+    "tema_principal": "Agentes Comunitários de Saúde e de Endemias",
+    "resumo_curto": "Garante a remuneração mínima e regula a atuação de Agentes Comunitários de Saúde e de Combate a Endemias.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc120.htm"
+  },
+  {
+    "id": "LEI_14536_2023",
+    "titulo": "Lei nº 14.536, de 28 de junho de 2023",
+    "tipo": "lei",
+    "orgao": "Planalto",
+    "data_publicacao": "2023-06-29",
+    "tema_principal": "Agentes Comunitários de Saúde",
+    "resumo_curto": "Dispõe sobre o reajuste do piso salarial dos Agentes Comunitários de Saúde e dos Agentes de Combate às Endemias.",
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2023/Lei/L14536.htm"
+  },
+  {
+    "id": "LEI_11350_2006",
+    "titulo": "Lei nº 11.350, de 5 de outubro de 2006",
+    "tipo": "lei",
+    "orgao": "Planalto",
+    "data_publicacao": "2006-10-05",
+    "tema_principal": "Agentes Comunitários de Saúde e de Endemias",
+    "resumo_curto": "Regulamenta as atividades dos Agentes Comunitários de Saúde e Agentes de Combate às Endemias.",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11350.htm"
+  }
+]
