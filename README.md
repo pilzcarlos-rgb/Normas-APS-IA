@@ -60,7 +60,25 @@ Em vez de uma simples lista de portarias, este sistema representa as normas da A
 
 ## 🚀 Início Rápido
 
-### Instalação
+### Instalação Automática (Recomendado)
+
+```bash
+# Clone o repositório
+git clone https://github.com/pilzcarlos-rgb/Normas-APS-IA.git
+cd Normas-APS-IA
+
+# Execute o script de setup
+./setup.sh
+```
+
+O script automaticamente:
+- Cria ambiente virtual
+- Instala dependências
+- Valida configurações
+- Inicializa o banco de dados
+- Cria dados de exemplo
+
+### Instalação Manual
 
 ```bash
 # Clone o repositório
@@ -75,25 +93,37 @@ venv\Scripts\activate  # Windows
 
 # Instale as dependências
 pip install -r requirements.txt
+
+# Execute o setup
+python setup.py
 ```
 
-### Inicialização do Banco de Dados
+### Instalação com Docker
 
 ```bash
-python -c "from src.models import init_database; init_database()"
+# Clone o repositório
+git clone https://github.com/pilzcarlos-rgb/Normas-APS-IA.git
+cd Normas-APS-IA
+
+# Construir e iniciar com Docker Compose
+docker-compose up -d
+
+# O portal estará disponível em http://localhost:5000
 ```
 
 ### Coleta de Dados
 
 ```bash
-# Camada 1: Varredura BVSMS
-python -m src.scrapers.bvsms_scraper
+# Pipeline completo (recomendado)
+python main.py
 
-# Camada 2: Parse de consolidações
-python -m src.scrapers.consolidation_parser
+# Ou use o script de coleta
+python scripts/collect_data.py
 
-# Camada 3: Programas específicos
-python -m src.scrapers.program_scraper
+# Coleta por camadas individuais
+python -m src.scrapers.bvsms_scraper      # Camada 1
+python -m src.scrapers.consolidation_parser  # Camada 2
+python -m src.scrapers.program_scraper     # Camada 3
 ```
 
 ### Executar Portal Web
@@ -233,6 +263,35 @@ O sistema processa documentos para:
 4. Geração de datasets Q&A
 5. Resumos técnicos para embeddings
 6. Casos de uso por porte de município
+
+## 🛠️ Scripts Utilitários
+
+### Coleta de Dados
+```bash
+# Coleta completa com todas as camadas
+python scripts/collect_data.py
+```
+
+### Exportação de Dados
+```bash
+# Exportar para JSON
+python scripts/export_data.py json
+
+# Exportar para CSV
+python scripts/export_data.py csv
+
+# Exportar relatório HTML
+python scripts/export_data.py html
+
+# Exportar tudo
+python scripts/export_data.py all
+```
+
+### Automação com GitHub Actions
+O repositório inclui workflows para:
+- **CI/CD**: Testes automáticos em múltiplas versões do Python
+- **Deploy**: Publicação automática do portal no GitHub Pages
+- **Quality Checks**: Validação de código e estrutura
 
 ## 📚 Normas-Chave Incluídas
 

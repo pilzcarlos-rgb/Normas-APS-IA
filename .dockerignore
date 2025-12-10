@@ -1,0 +1,55 @@
+# Docker ignore file for APS Normative Graph System
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Data and logs (will be mounted as volumes)
+data/raw/
+data/cache/
+data/temp/
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation (not needed in container)
+docs/
+examples/
+
+# Test files
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+*.egg-info
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
