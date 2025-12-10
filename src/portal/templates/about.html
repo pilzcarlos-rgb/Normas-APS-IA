@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Grafo Normativo da APS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Grafo Normativo da APS</h1>
+                <ul class="nav-menu">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/search">Busca</a></li>
+                    <li><a href="/graph">Visualização</a></li>
+                    <li><a href="/about" class="active">Sobre</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="about-content">
+            <h1>Sobre o Grafo Normativo da APS</h1>
+            
+            <h2>O que é?</h2>
+            <p>
+                O Grafo Normativo da APS é um sistema abrangente de mapeamento e análise 
+                da legislação estruturante da Atenção Primária à Saúde no Brasil. 
+                Em vez de uma simples lista de portarias, o sistema representa as normas 
+                como um grafo com nós (documentos normativos) e relações (institui, altera, 
+                revoga, regulamenta, consolida).
+            </p>
+
+            <h2>Estrutura do Grafo</h2>
+            
+            <h3>Nós (Documentos Normativos)</h3>
+            <ul>
+                <li>Constituição Federal</li>
+                <li>Leis e Leis Complementares</li>
+                <li>Decretos</li>
+                <li>Portarias GM/MS e SAPS</li>
+                <li>Portarias de Consolidação (essenciais para completude)</li>
+                <li>Resoluções CIT estruturantes</li>
+                <li>Notas técnicas e manuais operacionais</li>
+            </ul>
+
+            <h3>Relações</h3>
+            <ul>
+                <li><strong>Institui:</strong> cria ou estabelece</li>
+                <li><strong>Altera:</strong> modifica</li>
+                <li><strong>Revoga:</strong> anula ou cancela</li>
+                <li><strong>Regulamenta:</strong> detalha a implementação</li>
+                <li><strong>Consolida:</strong> incorpora múltiplas normas</li>
+                <li><strong>Efeitos financeiros:</strong> impactos no financiamento</li>
+            </ul>
+
+            <h2>Metodologia de Coleta</h2>
+            
+            <h3>Estratégia em 3 Camadas</h3>
+            
+            <div class="methodology-layer">
+                <h4>Camada 1: Varredura Ampla Temporal (2010-2025)</h4>
+                <p>
+                    Busca sistemática no BVSMS (Biblioteca Virtual em Saúde do MS) por termos 
+                    e siglas relacionados à APS em cada ano:
+                </p>
+                <ul>
+                    <li>Atenção Básica, Atenção Primária, ESF</li>
+                    <li>eAP, eSB, ACS, ACE</li>
+                    <li>SISAB, e-SUS, Informatiza APS</li>
+                    <li>PMAQ, Previne Brasil</li>
+                    <li>Financiamento, capitação, desempenho, equidade</li>
+                </ul>
+            </div>
+
+            <div class="methodology-layer">
+                <h4>Camada 2: Varredura por Consolidações</h4>
+                <p>Análise detalhada das Portarias de Consolidação:</p>
+                <ul>
+                    <li>Portaria de Consolidação GM/MS nº 6/2017 (financiamento)</li>
+                    <li>Portaria de Consolidação SAPS nº 1/2021 (APS)</li>
+                </ul>
+                <p>
+                    Parser de anexos, artigos que citam atos anteriores, e listas 
+                    internas de programas.
+                </p>
+            </div>
+
+            <div class="methodology-layer">
+                <h4>Camada 3: Programas com Ecossistema Próprio</h4>
+                <p>Coleta especializada para programas com microlegislação extensa:</p>
+                <ul>
+                    <li>Previne Brasil (Portaria 2.979/2019)</li>
+                    <li>Novo Cofinanciamento APS (Portaria 3.493/2024)</li>
+                    <li>PMAQ (histórico)</li>
+                    <li>Informatiza APS</li>
+                </ul>
+            </div>
+
+            <h2>Fontes Oficiais</h2>
+            <ul>
+                <li><strong>Planalto:</strong> Constituição, leis, decretos</li>
+                <li><strong>BVSMS/SaudeLegis:</strong> Portarias por órgão e ano</li>
+                <li><strong>Normas Consolidadas MS:</strong> Índice oficial de atos incorporados</li>
+                <li><strong>SAPS:</strong> Lista viva de normas estruturantes da ESF</li>
+            </ul>
+
+            <h2>Critérios de Qualidade</h2>
+            
+            <h3>Completude Validada por:</h3>
+            <ul>
+                <li><strong>Cobertura temporal:</strong> 2010-2025 com registros</li>
+                <li><strong>Cobertura por fonte:</strong> Planalto, BVSMS, Consolidações</li>
+                <li><strong>Cobertura temática:</strong> Organização, Financiamento, Informação, Força de Trabalho</li>
+                <li><strong>Consistência do grafo:</strong> relações bidirecionais verificadas</li>
+                <li><strong>Checkpoint manual:</strong> comparação com lista oficial SAPS/ESF</li>
+            </ul>
+
+            <h2>Uso para Treinamento de IA</h2>
+            <p>
+                O sistema processa os documentos coletados para gerar material de 
+                treinamento robusto:
+            </p>
+            <ul>
+                <li>Conversão HTML/PDF para texto limpo</li>
+                <li>Separação por artigos e anexos</li>
+                <li>Marcação com tags (tema, nível normativo, vigência, efeitos financeiros)</li>
+                <li>Geração de datasets Q&A a partir dos dispositivos legais</li>
+                <li>Resumos técnicos para embeddings</li>
+                <li>Casos de uso por porte de município</li>
+            </ul>
+
+            <h2>Tecnologias Utilizadas</h2>
+            <ul>
+                <li><strong>Backend:</strong> Python, SQLAlchemy, Flask</li>
+                <li><strong>Database:</strong> SQLite</li>
+                <li><strong>Web Scraping:</strong> BeautifulSoup, Requests</li>
+                <li><strong>Análise de Texto:</strong> NLTK, spaCy</li>
+                <li><strong>Visualização:</strong> D3.js, Chart.js</li>
+            </ul>
+
+            <h2>Links Úteis</h2>
+            <ul>
+                <li><a href="https://www.planalto.gov.br" target="_blank">Planalto - Legislação Federal</a></li>
+                <li><a href="https://bvsms.saude.gov.br/bvs/saudelegis" target="_blank">BVSMS - Saúde Legis</a></li>
+                <li><a href="https://www.gov.br/saude" target="_blank">Ministério da Saúde</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Grafo Normativo da APS. Sistema de mapeamento de legislação da Atenção Primária à Saúde.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

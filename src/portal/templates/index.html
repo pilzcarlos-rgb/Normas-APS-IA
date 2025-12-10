@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafo Normativo da APS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Grafo Normativo da APS</h1>
+                <ul class="nav-menu">
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/search">Busca</a></li>
+                    <li><a href="/graph">Visualização</a></li>
+                    <li><a href="/about">Sobre</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Sistema de Grafo Normativo da Atenção Primária à Saúde</h2>
+            <p>Navegue pela legislação estruturante da APS no Brasil (2010-2025)</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>{{ stats.total_norms }}</h3>
+                <p>Normas Totais</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.active_norms }}</h3>
+                <p>Normas Vigentes</p>
+            </div>
+            <div class="stat-card">
+                <h3>{{ stats.revoked_norms }}</h3>
+                <p>Normas Revogadas</p>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h2>Navegação</h2>
+            
+            <div class="nav-section">
+                <h3>Por Tema</h3>
+                <div class="theme-grid">
+                    <a href="/theme/organizacao_aps" class="theme-card">
+                        <h4>Organização da APS</h4>
+                        <p>PNAB, estrutura e organização</p>
+                    </a>
+                    <a href="/theme/financiamento" class="theme-card">
+                        <h4>Financiamento</h4>
+                        <p>Previne Brasil, cofinanciamento</p>
+                    </a>
+                    <a href="/theme/sistemas_informacao" class="theme-card">
+                        <h4>Sistemas de Informação</h4>
+                        <p>e-SUS, SISAB, informatização</p>
+                    </a>
+                    <a href="/theme/forca_trabalho" class="theme-card">
+                        <h4>Força de Trabalho</h4>
+                        <p>ACS, ACE, credenciamento</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h3>Por Ano</h3>
+                <div class="year-selector">
+                    <select id="year-select" onchange="window.location.href='/year/'+this.value">
+                        <option value="">Selecione um ano</option>
+                        {% for year in years %}
+                        <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <h3>Por Status de Vigência</h3>
+                <div class="status-filters">
+                    <button class="filter-btn" onclick="filterByStatus('vigente')">Vigentes</button>
+                    <button class="filter-btn" onclick="filterByStatus('revogada')">Revogadas</button>
+                    <button class="filter-btn" onclick="filterByStatus('alterada_parcial')">Alteradas</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-norms">
+            <h2>Normas Estruturantes</h2>
+            <ul class="norm-list">
+                <li>
+                    <a href="/norm/LC_141_2012">
+                        <strong>Lei Complementar 141/2012</strong>
+                        <span>Regulamenta financiamento do SUS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/norm/DECRETO_7508_2011">
+                        <strong>Decreto 7.508/2011</strong>
+                        <span>Organização interfederativa do SUS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/norm/PORTARIA_CONSOLIDACAO_SAPS_1_2021">
+                        <strong>Portaria de Consolidação SAPS nº 1/2021</strong>
+                        <span>Consolidação da APS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/norm/PORTARIA_2979_2019">
+                        <strong>Portaria 2.979/2019</strong>
+                        <span>Institui o Previne Brasil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/norm/PORTARIA_3493_2024">
+                        <strong>Portaria 3.493/2024</strong>
+                        <span>Novo cofinanciamento da APS</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Grafo Normativo da APS. Sistema de mapeamento de legislação da Atenção Primária à Saúde.</p>
+            <p>Fontes: Planalto, BVSMS, Portarias de Consolidação</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+# Configuration for APS Normative Graph System
+
+# Data sources
+sources:
+  planalto:
+    base_url: "http://www.planalto.gov.br"
+    types:
+      - constitution
+      - laws
+      - complementary_laws
+      - decrees
+  
+  bvsms:
+    base_url: "https://bvsms.saude.gov.br/bvs/saudelegis"
+    search_terms:
+      - "Atenção Básica"
+      - "Atenção Primária"
+      - "ESF"
+      - "eAP"
+      - "eSB"
+      - "ACS"
+      - "ACE"
+      - "SISAB"
+      - "e-SUS"
+      - "Informatiza APS"
+      - "PMAQ"
+      - "Previne Brasil"
+      - "financiamento"
+      - "capitação"
+      - "desempenho"
+      - "equidade"
+      - "vínculo"
+  
+  key_norms:
+    - id: "LC_141_2012"
+      type: "Lei Complementar"
+      number: "141"
+      year: 2012
+      description: "Regulamenta financiamento do SUS"
+    
+    - id: "DECRETO_7508_2011"
+      type: "Decreto"
+      number: "7508"
+      year: 2011
+      description: "Organização interfederativa do SUS"
+    
+    - id: "PORTARIA_CONSOLIDACAO_6_2017"
+      type: "Portaria de Consolidação GM/MS"
+      number: "6"
+      year: 2017
+      description: "Consolidação de financiamento"
+    
+    - id: "PORTARIA_CONSOLIDACAO_SAPS_1_2021"
+      type: "Portaria de Consolidação SAPS"
+      number: "1"
+      year: 2021
+      description: "Consolidação da APS"
+    
+    - id: "PORTARIA_2979_2019"
+      type: "Portaria GM/MS"
+      number: "2979"
+      year: 2019
+      description: "Institui o Previne Brasil"
+    
+    - id: "PORTARIA_3493_2024"
+      type: "Portaria GM/MS"
+      number: "3493"
+      year: 2024
+      description: "Novo cofinanciamento da APS"
+
+# Temporal coverage
+temporal_range:
+  start_year: 2010
+  end_year: 2025
+
+# Themes for classification
+themes:
+  - organizacao_aps
+  - financiamento
+  - sistemas_informacao
+  - forca_trabalho
+  - equidade
+  - saude_bucal
+  - credenciamento
+  - programas_especificos
+
+# Relationship types
+relationship_types:
+  - institui
+  - altera
+  - revoga
+  - regulamenta
+  - consolida
+  - efeitos_financeiros
+
+# Database configuration
+database:
+  type: "sqlite"
+  path: "data/normas_aps.db"
+  
+# Output configuration
+output:
+  formats:
+    - jsonl
+    - sqlite
+    - html
+  portal:
+    enabled: true
+    port: 5000
+    title: "Grafo Normativo da APS"
